@@ -14,7 +14,7 @@ public class clinkGlasses {
 			int countAngestossen =0;
 			
 			for (int i=1; i<=anzahlPersonen; i++) {
-				countAngestossen = i*(i-1)/2;
+				countAngestossen += i*(i-1)/2;
 			}
 			System.out.println("Es wurde "+ countAngestossen + " mal angestossen, bei " + anzahlPersonen + " Anzahl Personen");
 			return countAngestossen;	
