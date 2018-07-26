@@ -8,14 +8,20 @@ public class clinkGlasses {
 		this.anzahlPersonen = anzahlPersonen;
 	}
 	
-	public int anstossen(int anzahlPersonen) {
-		int countAngestossen = anzahlPersonen*(anzahlPersonen-1)/2;
-		return countAngestossen;
-	}
-	
-	public int anzeigenTotAngestossen() {
-		int totAngestossen = 1;
-		System.out.println("Angestossen");
-		return totAngestossen;		
+	public int anstossen() {
+		
+		if (anzahlPersonen>1 && anzahlPersonen <= MAXANZHALPERSONEN) {
+			int countAngestossen =0;
+			
+			for (int i=1; i<=anzahlPersonen; i++) {
+				countAngestossen = i*(i-1)/2;
+			}
+			System.out.println("Es wurde "+ countAngestossen + " mal angestossen, bei " + anzahlPersonen + " Anzahl Personen");
+			return countAngestossen;	
+		}
+		System.out.println("Zuviele oder zuwenige Personen, Anzahl: "+ anzahlPersonen);
+		return 0;
+		
 	}
 }
+
