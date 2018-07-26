@@ -1,2 +1,2 @@
 # clinkGlasses
-# commit Test
+# This is just a student project 
